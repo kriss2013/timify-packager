@@ -5,6 +5,6 @@
 		var sdk = new TimifySDK(accessToken, apiKey);
 	});
 
-	// Start developing from here
+	// Start coding here
 
 }());
