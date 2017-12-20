@@ -22,7 +22,7 @@ git clone git@github.com:timify/timify-packager.git
 npm install
 ```
 
-4)  Initialize the project with packager (use the console)
+4)  Initialize the project with the packager (use the console)
 
 ```bash
 node packager.js new YOUR_APP_NAME
