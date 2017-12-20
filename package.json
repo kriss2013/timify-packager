@@ -1,0 +1,16 @@
+{
+  "name": "timify-packager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "packager.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TerminApp GmbH",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^2.1.0",
+    "colors": "^1.1.2",
+    "commander": "^2.12.2"
+  }
+}
