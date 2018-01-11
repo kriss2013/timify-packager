@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+body { background: #fff; padding: 15px; margin: 0; box-sizing: border-box; }
+
+.contact-form .text { text-align: center; margin-bottom: 10px; }
+.contact-form .field { margin-bottom: 10px; }
+
+.app-uninstall-confirm { display: none; background: rgba(0, 0, 0, 0.8); position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 100; }
+	.app-uninstall-confirm .app-uninstall-confirm-cnt { width: 420px; background: #fff; text-align: center; padding: 20px; margin-left: -210px; position: absolute; left: 50%; top: 50%; z-index: 101; box-shadow: rgba(0, 0, 0, 0.3) 0 0 9px; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); border-radius: 3px; }
+	.app-uninstall-confirm .app-uninstall-confirm-message { color: #505a5e; font-size: 13px; font-weight: 300; margin-bottom: 20px; }
+	.app-uninstall-confirm input { width: 200px; height: 32px; line-height: 32px; background: #fff; color: #505a5e; font-size: 13px; font-weight: 300; border: 1px solid #505a5e; padding: 0 10px; border-radius: 3px; }
+	.app-uninstall-confirm .app-uninstall-controls { margin-top: 15px; }
+	.app-uninstall-confirm #app-uninstall-btn-confirm { display: inline-block; background: #cb3b43; color: #fff; font-size: 14px; font-weight: 500; text-align: center; border: 0; padding: 8px 15px; margin: 0 2px; border-radius: 4px; position: relative; -ms-transition: background 0.4s ease, color 0.4s ease; -webkit-transition: background 0.4s ease, color 0.4s ease; -moz-transition: background 0.4s ease, color 0.4s ease; transition: background 0.4s ease, color 0.4s ease; box-sizing: border-box; cursor: pointer; }
+	.app-uninstall-confirm #app-uninstall-btn-cancel { display: inline-block; background: #b6babd; color: #505a5e; font-size: 14px; font-weight: normal; text-align: center; border: 0; padding: 8px 15px; margin: 0 2px; border-radius: 4px; position: relative; -ms-transition: background 0.4s ease, color 0.4s ease; -webkit-transition: background 0.4s ease, color 0.4s ease; -moz-transition: background 0.4s ease, color 0.4s ease; transition: background 0.4s ease, color 0.4s ease; box-sizing: border-box; cursor: pointer; }

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Contacts Application</title>
+
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<meta name="Author" content="">
+	<meta name="Robots" content="index,follow">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&subset=cyrillic,latin-ext">
+	<link rel="stylesheet" type="text/css" href="https://developers.timify.com/widget-library/widgets/dist.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/app.css"> <!-- We changed {__ASSETS_CDN__} variable with "assets/" to load our css local, but it's necessary to have the variable when you upload your application. --> 
+
+	<script type="text/javascript">
+		var backendUrl = '',
+			apiKey = '{__API_KEY__}',
+			appId = '{__APP_ID__}',
+			accountId = '{__ACCOUNT_ID__}',
+			accessToken = '{__ACCESS_TOKEN__}';
+	</script>
+
+</head>
+<body>
+	<!-- Put your UI elements here -->
+	
+	<timify:tabs uid="contacts-tabs"> 
+		<tab uid="contact-form">
+
+			<div class="contact-form">
+
+				<div rel="contact-form-message" class="text"></div>
+
+				<div class="field">
+					<timify:textfield uid="name-field"></timify:textfield>
+				</div>
+
+				<div class="field">
+					<timify:textfield uid="email-field"></timify:textfield>
+				</div>
+
+				<div class="field">
+					<timify:textfield uid="phone-field"></timify:textfield>
+				</div>
+
+				<div class="field">
+					<timify:textarea uid="message-field"></timify:textarea>
+				</div>
+
+				<div class="field">
+					<timify:notification type="error" uid="contact-form-notification" close>
+						<title></title>
+						<message></message>
+					</timify:notification>
+				</div>
+
+				<timify:button uid="submit-btn" full="true"></timify:button>
+			</div>
+
+		</tab> 
+		<tab uid="settings" icon="cog" position="right">
+
+			<!--
+				This is Settings tab from where the user can make necessary configuration of its application. Also
+				must be able to uninstall the application. As this is demo application and we do not have configurations
+				for it we will place only uninstall box with notification for unsuccessfull operation.
+			-->
+
+			<timify:notification type="error" uid="operation-settings-status" close>
+				<title></title>
+				<message></message>
+			</timify:notification>
+
+			<timify:divider uid="divider-uninstall" icon="window-close"></timify:divider>
+
+			<timify:box align="center">
+
+				<span id="uninstall-message"></span>
+				<div class="clear"></div>
+				<br />
+
+				<timify:button uid="uninstall-app" theme="ghost" light></timify:button>
+			</timify:box>
+
+		</tab>
+	</timify:tabs>
+
+	<!-- 
+		Here we place confirmation popup. When the user click to Uninstall button we must show this popup and user
+		must confirm uninstallation of the application.
+	-->
+	<div class="app-uninstall-confirm">
+		<div class="app-uninstall-confirm-cnt">
+			<div class="app-uninstall-confirm-message"></div>
+			<input type="text" id="uninstall-confirm">
+
+			<div class="app-uninstall-controls">
+				<button id="app-uninstall-btn-confirm"></button>
+				<button id="app-uninstall-btn-cancel"></button>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="https://developers.timify.com/widget-library/sdk/dist.js"></script>
+	<script type="text/javascript" src="https://developers.timify.com/widget-library/widgets/dist.js"></script>
+	<script type="text/javascript" src="assets/locales/en.js"></script> <!-- We hardcode {__LOCALE__} variable with en to load english locale file. Also remove {__ASSETS_CDN__} variable from the url. -->
+	<script type="text/javascript" src="assets/js/app.js"></script> <!-- We changed {__ASSETS_CDN__} variable with "assets/" to load our css local, but it's necessary to have the variable when you upload your application. --> 
+</body>
+</html>
