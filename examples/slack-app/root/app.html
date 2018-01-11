@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<title></title>
+
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<meta name="Author" content="">
+	<meta name="Robots" content="index,follow">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&subset=cyrillic,latin-ext">
+	<link rel="stylesheet" type="text/css" href="{__WIDGET_LIB_CSS__}">
+	<link rel="stylesheet" type="text/css" href="{__ASSETS_CDN__}/css/app.css?v={__TIMESTAMP__}"> <!-- We changed {__ASSETS_CDN__} variable with "assets/" to load our css local, but it's necessary to have the variable when you upload your application. -->
+
+	<script type="text/javascript">
+		var backendUrl	= '',
+			apiKey		= '{__API_KEY__}',
+			appId		= '{__APP_ID__}',
+			accountId	= '{__ACCOUNT_ID__}',
+			accessToken	= '{__ACCESS_TOKEN__}',
+			locale		= '{__LOCALE__}';
+	</script>
+
+</head>
+
+<body>
+
+<div class="app-container">
+
+	<div class="header">
+		<div class="app-title">{__APP_NAME__}</div>
+		<div class="app-badges">
+			<span class="app-plan {__APP_PLAN__}">{__APP_PLAN__}</span>
+			<span class="app-version">{__APP_VERSION__}</span>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<!-- Put your UI elements here -->
+
+	<timify:tabs uid="slack-tabs">
+		<tab uid="appointments">
+
+			<timify:notification uid="operation-status" theme="big" close>
+				<title></title>
+				<message></message>
+			</timify:notification>
+
+			<timify:datepicker uid="date"></timify:datepicker>
+			<div class="clear"></div>
+			<br />
+
+			<timify:button uid="load" full></timify:button>
+			<div class="clear"></div>
+			<br />
+
+			<div id="appointments-list"></div>
+
+		</tab>
+		<tab uid="settings" icon="cog" position="right">
+
+			<!--
+				This is Settings tab from where the user can make necessary configuration of its application. Also
+				must be able to uninstall the application. As this is demo application and we do not have configurations
+				for it we will place only uninstall box with notification for unsuccessfull operation.
+			-->
+
+			<timify:notification type="error" uid="operation-settings-status" close>
+				<title></title>
+				<message></message>
+			</timify:notification>
+
+			<timify:divider uid="divider-uninstall" icon="window-close"></timify:divider>
+
+			<timify:box align="center">
+
+				<span rel="box-text"></span>
+				<div class="clear"></div>
+				<br />
+
+				<timify:button uid="uninstall-app" theme="ghost" light></timify:button>
+			</timify:box>
+
+		</tab>
+	</timify:tabs>
+
+	<!--
+		Here we place confirmation popup. When the user click to Uninstall button we must show this popup and user
+		must confirm uninstallation of the application.
+	-->
+	<div class="app-uninstall-confirm">
+		<div class="app-uninstall-confirm-cnt">
+			<div class="app-uninstall-confirm-message"></div>
+			<input type="text" id="uninstall-confirm">
+
+			<div class="app-uninstall-controls">
+				<button id="app-uninstall-btn-confirm"></button>
+				<button id="app-uninstall-btn-cancel"></button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="{__SDK_LIB__}"></script>
+<script type="text/javascript" src="{__WIDGET_LIB_JS__}"></script>
+<script type="text/javascript" src="{__ASSETS_CDN__}/locales/{__LOCALE__}.js?v={__TIMESTAMP__}"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+<script type="text/javascript" src="{__ASSETS_CDN__}/js/app.js?v={__TIMESTAMP__}"></script>
+
+</body>
+
+</html>
