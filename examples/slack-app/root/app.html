@@ -15,8 +15,8 @@
 	<meta name="viewport" content="width=device-width">
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&subset=cyrillic,latin-ext">
-	<link rel="stylesheet" type="text/css" href="{__WIDGET_LIB_CSS__}">
-	<link rel="stylesheet" type="text/css" href="{__ASSETS_CDN__}/css/app.css?v={__TIMESTAMP__}"> <!-- We changed {__ASSETS_CDN__} variable with "assets/" to load our css local, but it's necessary to have the variable when you upload your application. -->
+	<link rel="stylesheet" type="text/css" href="https://developers.timify.com/widget-library/widgets/dist.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/app.css?v={__TIMESTAMP__}"> <!-- We changed {__ASSETS_CDN__} variable with "assets/" to load our css local, but it's necessary to have the variable when you upload your application. -->
 
 	<script type="text/javascript">
 		var backendUrl	= '',
@@ -107,11 +107,11 @@
 	</div>
 </div>
 
-<script type="text/javascript" src="{__SDK_LIB__}"></script>
-<script type="text/javascript" src="{__WIDGET_LIB_JS__}"></script>
-<script type="text/javascript" src="{__ASSETS_CDN__}/locales/{__LOCALE__}.js?v={__TIMESTAMP__}"></script>
+<script type="text/javascript" src="https://developers.timify.com/widget-library/sdk/dist.js"></script>
+<script type="text/javascript" src="https://developers.timify.com/widget-library/widgets/dist.js"></script>
+<script type="text/javascript" src="assets/locales/{__LOCALE__}.js?v={__TIMESTAMP__}"></script> <!-- We hardcode {__LOCALE__} variable with en to load english locale file. Also remove {__ASSETS_CDN__} variable from the url. -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
-<script type="text/javascript" src="{__ASSETS_CDN__}/js/app.js?v={__TIMESTAMP__}"></script>
+<script type="text/javascript" src="assets/js/app.js?v={__TIMESTAMP__}"></script> <!-- We hardcode {__LOCALE__} variable with en to load english locale file. Also remove {__ASSETS_CDN__} variable from the url. -->
 
 </body>
 
