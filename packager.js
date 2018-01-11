@@ -7,8 +7,8 @@ const
 	fs = require('fs'),
 	archiver = require('archiver');
 
-var dir = './',
-	lib_path = '//stg-developers.timify.com/widget-library';
+var dir		= './',
+	lib_path= '//developers.timify.com/widget-library';
 
 program
 	.version('1.0.0')
