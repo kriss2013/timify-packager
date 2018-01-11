@@ -12,3 +12,11 @@ body { background: #fff; padding: 15px; margin: 0; box-sizing: border-box; }
 	.app-uninstall-confirm .app-uninstall-controls { margin-top: 15px; }
 	.app-uninstall-confirm #app-uninstall-btn-confirm { display: inline-block; background: #cb3b43; color: #fff; font-size: 14px; font-weight: 500; text-align: center; border: 0; padding: 8px 15px; margin: 0 2px; border-radius: 4px; position: relative; -ms-transition: background 0.4s ease, color 0.4s ease; -webkit-transition: background 0.4s ease, color 0.4s ease; -moz-transition: background 0.4s ease, color 0.4s ease; transition: background 0.4s ease, color 0.4s ease; box-sizing: border-box; cursor: pointer; }
 	.app-uninstall-confirm #app-uninstall-btn-cancel { display: inline-block; background: #b6babd; color: #505a5e; font-size: 14px; font-weight: normal; text-align: center; border: 0; padding: 8px 15px; margin: 0 2px; border-radius: 4px; position: relative; -ms-transition: background 0.4s ease, color 0.4s ease; -webkit-transition: background 0.4s ease, color 0.4s ease; -moz-transition: background 0.4s ease, color 0.4s ease; transition: background 0.4s ease, color 0.4s ease; box-sizing: border-box; cursor: pointer; }
+
+.app-container .header { border-bottom: 1px dotted #919191; font-size: 17px; font-weight: 300; text-align: center; color: #505a5e; padding-bottom: 14px; margin-bottom: 20px; position: relative; }
+	.app-container .header .app-title { font-size: 18px; font-weight: 300; text-align: left; float: left; }
+	.app-container .header .app-badges span { display: block; font-size: 10px; font-weight: 500; border-radius: 3px; padding: 4px 5px; white-space: nowrap; float: right; }
+	.app-container .header .app-badges span.app-version { font-weight: 300; font-style: italic; background: #b6babd; margin-right: 5px; }
+	.app-container .header .app-badges span.app-plan { color: #fff; font-size: 10px; font-weight: 300; }
+	.app-container .header .app-badges span.app-plan.FREE { background: #769851; }
+	.app-container .header .app-badges span.app-plan.PREMIUM { background: #ecd007; color: #505a5e; }

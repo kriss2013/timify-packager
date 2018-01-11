@@ -15,7 +15,7 @@
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&subset=cyrillic,latin-ext">
 	<link rel="stylesheet" type="text/css" href="https://developers.timify.com/widget-library/widgets/dist.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/app.css"> <!-- We changed {__ASSETS_CDN__} variable with "assets/" to load our css local, but it's necessary to have the variable when you upload your application. --> 
+	<link rel="stylesheet" type="text/css" href="assets/css/app.css"> <!-- We changed {__ASSETS_CDN__} variable with "assets/" to load our css local, but it's necessary to have the variable when you upload your application. -->
 
 	<script type="text/javascript">
 		var backendUrl = '',
@@ -27,9 +27,19 @@
 
 </head>
 <body>
+
+	<div class="header">
+		<div class="app-title">{__APP_NAME__}</div>
+		<div class="app-badges">
+			<span class="app-plan {__APP_PLAN__}">{__APP_PLAN__}</span>
+			<span class="app-version">{__APP_VERSION__}</span>
+		</div>
+		<div class="clear"></div>
+	</div>
+
 	<!-- Put your UI elements here -->
-	
-	<timify:tabs uid="contacts-tabs"> 
+
+	<timify:tabs uid="contacts-tabs">
 		<tab uid="contact-form">
 
 			<div class="contact-form">
@@ -62,7 +72,7 @@
 				<timify:button uid="submit-btn" full="true"></timify:button>
 			</div>
 
-		</tab> 
+		</tab>
 		<tab uid="settings" icon="cog" position="right">
 
 			<!--
@@ -90,7 +100,7 @@
 		</tab>
 	</timify:tabs>
 
-	<!-- 
+	<!--
 		Here we place confirmation popup. When the user click to Uninstall button we must show this popup and user
 		must confirm uninstallation of the application.
 	-->
@@ -109,6 +119,6 @@
 	<script type="text/javascript" src="https://developers.timify.com/widget-library/sdk/dist.js"></script>
 	<script type="text/javascript" src="https://developers.timify.com/widget-library/widgets/dist.js"></script>
 	<script type="text/javascript" src="assets/locales/en.js"></script> <!-- We hardcode {__LOCALE__} variable with en to load english locale file. Also remove {__ASSETS_CDN__} variable from the url. -->
-	<script type="text/javascript" src="assets/js/app.js"></script> <!-- We changed {__ASSETS_CDN__} variable with "assets/" to load our css local, but it's necessary to have the variable when you upload your application. --> 
+	<script type="text/javascript" src="assets/js/app.js"></script> <!-- We changed {__ASSETS_CDN__} variable with "assets/" to load our css local, but it's necessary to have the variable when you upload your application. -->
 </body>
 </html>

@@ -1,6 +1,10 @@
 'use strict';
 
 (function () {
+
+	/**
+	 * Waiting library to init all components
+	 */
 	Components.ready(function () {
 		var sdk = new TimifySDK(accessToken, apiKey);
 	});
@@ -30,7 +34,7 @@
 				name		: Components.get('name-field').value(),
 				email		: Components.get('email-field').value(),
 				phone		: Components.get('phone-field').value(),
-				message		: Components.get('message-field').value()			
+				message		: Components.get('message-field').value()
 			},
 			notification = Components.get('contact-form-notification');
 
@@ -44,7 +48,7 @@
 		if (formData.name == '') {
 			Components.get('name-field').error(Locales.error_field_required);
 			validData	= false;
-		}	
+		}
 		if (formData.email == '') {
 			Components.get('email-field').error(Locales.error_field_required);
 			validData	= false;
@@ -56,7 +60,7 @@
 		if (formData.message == '') {
 			Components.get('message-field').error(Locales.error_field_required);
 			validData	= false;
-		}	
+		}
 
 		//If there have some error we need to show error message
 		if (!validData) {
@@ -72,7 +76,7 @@
 			//Here you can add your source code to send all form data to some API endpoint.
 
 
-			
+
 
 			//Also we need to show success message
 			notification.setTitle(Locales.complete_title);
@@ -105,7 +109,7 @@
 	document.querySelector('#app-uninstall-btn-confirm').addEventListener('click', function () {
 
 		if (document.querySelector('input#uninstall-confirm').value == 'UNINSTALL') {
-			
+
 			/**
 			 * If the user type UNINSTALL in input field we need to execute a query to the API. We can do this via the SDK with
 			 * uninstall method.
@@ -148,6 +152,6 @@
 	document.querySelector('#app-uninstall-btn-cancel').addEventListener('click', function () {
 		document.querySelector('.app-uninstall-confirm').style.display = 'none';
 	});
-	
+
 
 }());
