@@ -75,7 +75,6 @@
 				 */
 				xhr.send(
 					'channel='	+ encodeURIComponent(slackChannel) + '&' +
-					'username=' + encodeURIComponent('Бат Жоре') + '&' +
 					'text=' + encodeURIComponent(Locales.slack_message.replace('%APPOINTMENT%',
 						appointment.title)));
 			},
